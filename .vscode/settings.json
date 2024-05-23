@@ -2,5 +2,13 @@
     "[python]": {
         "editor.defaultFormatter": "ms-python.autopep8"
     },
-    "python.formatting.provider": "none"
+    "python.formatting.provider": "none",
+    "terminal.integrated.env.windows": {
+        "HTTP_PROXY": "vip-users.proxy.edf.fr:3131",
+        "HTTPS_PROXY": "vip-users.proxy.edf.fr:3131",
+        "http_proxy": "vip-users.proxy.edf.fr:3131",
+        "https_proxy": "vip-users.proxy.edf.fr:3131",
+        "ftp_proxy": "vip-users.proxy.edf.fr:3131"
+}
+   
 }
