@@ -1,0 +1,2149 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://seitoSMA#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://seitoSMA#">
+    <Prefix name="" IRI="http://seitoSMA#"/>
+    <Prefix name="mod" IRI="https://w3id.org/mod#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="saref" IRI="https://saref.etsi.org/core/v3.2.1/"/>
+    <Prefix name="s4bldg" IRI="https://saref.etsi.org/saref4bldg/"/>
+    <Prefix name="seitoSMA" IRI="http://www.owl-ontologies.com/seitoSMA#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:backwardCompatibleWith"/>
+        <IRI>https://w3id.org/example/1.0.0</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:incompatibleWith"/>
+        <IRI>https://w3id.org/example/0.2.0</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:priorVersion"/>
+        <IRI>https://w3id.org/example/1.0.0</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal>0.0.1</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="mod:createdWith"/>
+        <IRI>https://chowlk.linkeddata.es/</IRI>
+    </Annotation>
+    <Declaration>
+        <Class IRI="AirQualityAgentManager"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="AirQualitySystem"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Building"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Floor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="HeatingAgentManager"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="HeatingSystem"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="LightingAgentManager"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="LightingSystem"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Room"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Zone"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="seitoSMA:Agent"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="seitoSMA:Device"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="seitoSMA:Occopiant"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="seitoSMA:Owner"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="seitoSMA:Person"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="seitoSMA:Service"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="seitoSMA:Space"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="seitoSMA:Systéme"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="seitoSMA:Tenant"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="seitoSMA:Visitor"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="saref:Device"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="saref:Service"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="s4bldg:Building"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="s4bldg:BuildingSpace"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasDevice"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="is"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isOccupiedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isSpaceOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="locatedIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="managedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="ownerBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="seitoSMA:canAccess"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="seitoSMA:canInstall"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="seitoSMA:canInteract"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="seitoSMA:canUse"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="seitoSMA:containsAgent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="seitoSMA:containsDevice"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="seitoSMA:containsSystem"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="seitoSMA:hasOccupiant"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="seitoSMA:hasPerson"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="seitoSMA:hasVisitor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="seitoSMA:isPartOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="seitoSMA:isTenantOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="seitoSMA:manages"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="seitoSMA:occupies"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="seitoSMA:offers"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="seitoSMA:owns"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="s4bldg:hasSpace"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Chauffage_1erN"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Chauffage_1erS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Chauffage_RDCN"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="EDF"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="EDF_Lab_les_Renardières"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Eclairage_1erN"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Eclairage_1erS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Eclairage_RDCN"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="First_Floor"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Ground"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="K15_Building"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Labo_K002"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Labo_K003"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Labo_K004"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Labo_K005"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Labo_K006"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Labo_K010"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Labo_K020"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Local_Detente_K009"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Local_Dtente_K011"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Local_Technicien_K023"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="PC_1erN"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="PC_1erS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="PC_RDCN"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="PC_back_up_1erN"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="PC_back_up_1erS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="POD2-00335"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="POD2-00337"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="POD2-00338"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="POD2-00340"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="POD2-00341"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="RDCN"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="RDCS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Room_K001"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Room_K012"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Room_K013"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Room_K014"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Room_K015"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Room_K016"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Room_K017"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Room_K101"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Room_K103"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Room_K104"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Room_K105"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Room_K106"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Room_K107"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Room_K108"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Room_K109"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Room_K110"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Room_K111"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Room_K112"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Room_K113"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Room_K114"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Room_K115"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Room_K116"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Room_K117"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Room_K118"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Room_K119"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Room_K120"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Room_K121"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Room_K122"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Room_K123"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Room_K124"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Room_K125"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Room_K126"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Room_K127"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="SEQUOIA"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Salle_de_Reunion_K007"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Salle_de_Reunion_K102"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Sanitaire_K002"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Sanitaire_K0S1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Sanitaire_K0S2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Serveur_Dep_K100"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="agentTest"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="airQualitySysem_RDCN_agent_manager"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="airQualitySysem_RDCS_agent_manager"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="airQualitySysem_first_floor_north_agent_manager"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="airQualitySysem_first_floor_south_agent_manager"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="first_floor_north"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="first_floor_south"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="heating_service"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="heationSysem_First_floor_North_agent_manager"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="heationSysem_RDCN_agent_manager"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="heationSysem_RDCS_agent_manager"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="heationSysem_first_floor_south_agent_manager"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="lightingSysem_RDCN_agent_manager"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="lightingSysem_RDCS_agent_manager"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="lightingSysem_first_floor_north_agent_manager"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="lightingSysem_first_floor_south_agent_manager"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="lighting_service"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="0H1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="0H2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="0H3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="0H6"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="1H1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="1H2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="1S1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="1S2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="1S3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="6102001000042"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="6102001000103"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="6102001000165"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="6102001000202"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="6102001000219"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="owl:backwardCompatibleWith"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="owl:incompatibleWith"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="owl:priorVersion"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="mod:createdWith"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="AirQualityAgentManager"/>
+        <Class abbreviatedIRI="seitoSMA:Agent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="AirQualitySystem"/>
+        <Class abbreviatedIRI="seitoSMA:Systéme"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Building"/>
+        <Class abbreviatedIRI="s4bldg:Building"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Floor"/>
+        <Class abbreviatedIRI="seitoSMA:Space"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="HeatingAgentManager"/>
+        <Class abbreviatedIRI="seitoSMA:Agent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="HeatingSystem"/>
+        <Class abbreviatedIRI="seitoSMA:Systéme"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="LightingAgentManager"/>
+        <Class abbreviatedIRI="seitoSMA:Agent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="LightingSystem"/>
+        <Class abbreviatedIRI="seitoSMA:Systéme"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Room"/>
+        <Class abbreviatedIRI="seitoSMA:Space"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Zone"/>
+        <Class abbreviatedIRI="seitoSMA:Space"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="seitoSMA:Device"/>
+        <Class abbreviatedIRI="saref:Device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="seitoSMA:Occopiant"/>
+        <Class abbreviatedIRI="seitoSMA:Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="seitoSMA:Service"/>
+        <Class abbreviatedIRI="saref:Service"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="seitoSMA:Space"/>
+        <Class abbreviatedIRI="s4bldg:BuildingSpace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="seitoSMA:Visitor"/>
+        <Class abbreviatedIRI="seitoSMA:Person"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class abbreviatedIRI="seitoSMA:Occopiant"/>
+        <Class abbreviatedIRI="seitoSMA:Visitor"/>
+    </DisjointClasses>
+    <DisjointUnion>
+        <Class abbreviatedIRI="seitoSMA:Agent"/>
+        <Class IRI="AirQualityAgentManager"/>
+        <Class IRI="HeatingAgentManager"/>
+        <Class IRI="LightingAgentManager"/>
+    </DisjointUnion>
+    <DisjointUnion>
+        <Class abbreviatedIRI="seitoSMA:Person"/>
+        <Class abbreviatedIRI="seitoSMA:Occopiant"/>
+        <Class abbreviatedIRI="seitoSMA:Visitor"/>
+    </DisjointUnion>
+    <DisjointUnion>
+        <Class abbreviatedIRI="seitoSMA:Space"/>
+        <Class IRI="Floor"/>
+        <Class IRI="Room"/>
+        <Class IRI="Zone"/>
+    </DisjointUnion>
+    <DisjointUnion>
+        <Class abbreviatedIRI="seitoSMA:Systéme"/>
+        <Class IRI="AirQualitySystem"/>
+        <Class IRI="HeatingSystem"/>
+        <Class IRI="LightingSystem"/>
+    </DisjointUnion>
+    <ClassAssertion>
+        <Class IRI="HeatingSystem"/>
+        <NamedIndividual IRI="Chauffage_1erN"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="HeatingSystem"/>
+        <NamedIndividual IRI="Chauffage_1erS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="HeatingSystem"/>
+        <NamedIndividual IRI="Chauffage_RDCN"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="seitoSMA:Owner"/>
+        <NamedIndividual IRI="EDF"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Building"/>
+        <NamedIndividual IRI="EDF_Lab_les_Renardières"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="LightingSystem"/>
+        <NamedIndividual IRI="Eclairage_1erN"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="LightingSystem"/>
+        <NamedIndividual IRI="Eclairage_1erS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="LightingSystem"/>
+        <NamedIndividual IRI="Eclairage_RDCN"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Floor"/>
+        <NamedIndividual IRI="First_Floor"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Floor"/>
+        <NamedIndividual IRI="Ground"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Zone"/>
+        <NamedIndividual IRI="K15_Building"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Room"/>
+        <NamedIndividual IRI="Labo_K002"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Room"/>
+        <NamedIndividual IRI="Labo_K003"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Room"/>
+        <NamedIndividual IRI="Labo_K004"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Room"/>
+        <NamedIndividual IRI="Labo_K005"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Room"/>
+        <NamedIndividual IRI="Labo_K006"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Room"/>
+        <NamedIndividual IRI="Labo_K010"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Room"/>
+        <NamedIndividual IRI="Labo_K020"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Room"/>
+        <NamedIndividual IRI="Local_Detente_K009"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Room"/>
+        <NamedIndividual IRI="Local_Dtente_K011"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Room"/>
+        <NamedIndividual IRI="Local_Technicien_K023"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="seitoSMA:Systéme"/>
+        <NamedIndividual IRI="PC_1erN"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="seitoSMA:Systéme"/>
+        <NamedIndividual IRI="PC_1erS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="seitoSMA:Systéme"/>
+        <NamedIndividual IRI="PC_RDCN"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="seitoSMA:Systéme"/>
+        <NamedIndividual IRI="PC_back_up_1erN"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="seitoSMA:Systéme"/>
+        <NamedIndividual IRI="PC_back_up_1erS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="seitoSMA:Device"/>
+        <NamedIndividual IRI="POD2-00335"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="seitoSMA:Device"/>
+        <NamedIndividual IRI="POD2-00337"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="seitoSMA:Device"/>
+        <NamedIndividual IRI="POD2-00338"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="seitoSMA:Device"/>
+        <NamedIndividual IRI="POD2-00340"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="seitoSMA:Device"/>
+        <NamedIndividual IRI="POD2-00341"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Zone"/>
+        <NamedIndividual IRI="RDCN"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Zone"/>
+        <NamedIndividual IRI="RDCS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Room"/>
+        <NamedIndividual IRI="Room_K001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Room"/>
+        <NamedIndividual IRI="Room_K012"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Room"/>
+        <NamedIndividual IRI="Room_K013"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Room"/>
+        <NamedIndividual IRI="Room_K014"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Room"/>
+        <NamedIndividual IRI="Room_K015"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Room"/>
+        <NamedIndividual IRI="Room_K016"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Room"/>
+        <NamedIndividual IRI="Room_K017"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Room"/>
+        <NamedIndividual IRI="Room_K101"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Room"/>
+        <NamedIndividual IRI="Room_K103"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Room"/>
+        <NamedIndividual IRI="Room_K104"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Room"/>
+        <NamedIndividual IRI="Room_K105"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Room"/>
+        <NamedIndividual IRI="Room_K106"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Room"/>
+        <NamedIndividual IRI="Room_K107"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Room"/>
+        <NamedIndividual IRI="Room_K108"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Room"/>
+        <NamedIndividual IRI="Room_K109"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Room"/>
+        <NamedIndividual IRI="Room_K110"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Room"/>
+        <NamedIndividual IRI="Room_K111"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Room"/>
+        <NamedIndividual IRI="Room_K112"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Room"/>
+        <NamedIndividual IRI="Room_K113"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Room"/>
+        <NamedIndividual IRI="Room_K114"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Room"/>
+        <NamedIndividual IRI="Room_K115"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Room"/>
+        <NamedIndividual IRI="Room_K116"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Room"/>
+        <NamedIndividual IRI="Room_K117"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Room"/>
+        <NamedIndividual IRI="Room_K118"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Room"/>
+        <NamedIndividual IRI="Room_K119"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Room"/>
+        <NamedIndividual IRI="Room_K120"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Room"/>
+        <NamedIndividual IRI="Room_K121"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Room"/>
+        <NamedIndividual IRI="Room_K122"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Room"/>
+        <NamedIndividual IRI="Room_K123"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Room"/>
+        <NamedIndividual IRI="Room_K124"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Room"/>
+        <NamedIndividual IRI="Room_K125"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Room"/>
+        <NamedIndividual IRI="Room_K126"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Room"/>
+        <NamedIndividual IRI="Room_K127"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="seitoSMA:Tenant"/>
+        <NamedIndividual IRI="SEQUOIA"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Room"/>
+        <NamedIndividual IRI="Salle_de_Reunion_K007"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Room"/>
+        <NamedIndividual IRI="Salle_de_Reunion_K102"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Room"/>
+        <NamedIndividual IRI="Sanitaire_K002"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Room"/>
+        <NamedIndividual IRI="Sanitaire_K0S1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Room"/>
+        <NamedIndividual IRI="Sanitaire_K0S2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Room"/>
+        <NamedIndividual IRI="Serveur_Dep_K100"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="seitoSMA:Agent"/>
+        <NamedIndividual IRI="agentTest"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="AirQualityAgentManager"/>
+        <NamedIndividual IRI="airQualitySysem_RDCN_agent_manager"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="AirQualityAgentManager"/>
+        <NamedIndividual IRI="airQualitySysem_RDCS_agent_manager"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="AirQualityAgentManager"/>
+        <NamedIndividual IRI="airQualitySysem_first_floor_north_agent_manager"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="AirQualityAgentManager"/>
+        <NamedIndividual IRI="airQualitySysem_first_floor_south_agent_manager"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Zone"/>
+        <NamedIndividual IRI="first_floor_north"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Zone"/>
+        <NamedIndividual IRI="first_floor_south"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="seitoSMA:Service"/>
+        <NamedIndividual IRI="heating_service"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="HeatingAgentManager"/>
+        <NamedIndividual IRI="heationSysem_First_floor_North_agent_manager"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="HeatingAgentManager"/>
+        <NamedIndividual IRI="heationSysem_RDCN_agent_manager"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="HeatingAgentManager"/>
+        <NamedIndividual IRI="heationSysem_RDCS_agent_manager"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="HeatingAgentManager"/>
+        <NamedIndividual IRI="heationSysem_first_floor_south_agent_manager"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="LightingAgentManager"/>
+        <NamedIndividual IRI="lightingSysem_RDCN_agent_manager"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="LightingAgentManager"/>
+        <NamedIndividual IRI="lightingSysem_RDCS_agent_manager"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="LightingAgentManager"/>
+        <NamedIndividual IRI="lightingSysem_first_floor_north_agent_manager"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="LightingAgentManager"/>
+        <NamedIndividual IRI="lightingSysem_first_floor_south_agent_manager"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="seitoSMA:Service"/>
+        <NamedIndividual IRI="lighting_service"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Room"/>
+        <NamedIndividual IRI="0H1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Room"/>
+        <NamedIndividual IRI="0H2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Room"/>
+        <NamedIndividual IRI="0H3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Room"/>
+        <NamedIndividual IRI="0H6"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Room"/>
+        <NamedIndividual IRI="1H1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Room"/>
+        <NamedIndividual IRI="1H2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Room"/>
+        <NamedIndividual IRI="1S1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Room"/>
+        <NamedIndividual IRI="1S2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Room"/>
+        <NamedIndividual IRI="1S3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="seitoSMA:Device"/>
+        <NamedIndividual IRI="6102001000042"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="seitoSMA:Device"/>
+        <NamedIndividual IRI="6102001000103"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="seitoSMA:Device"/>
+        <NamedIndividual IRI="6102001000165"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="seitoSMA:Device"/>
+        <NamedIndividual IRI="6102001000202"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="seitoSMA:Device"/>
+        <NamedIndividual IRI="6102001000219"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="seitoSMA:offers"/>
+        <NamedIndividual IRI="Chauffage_1erN"/>
+        <NamedIndividual IRI="heating_service"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="seitoSMA:owns"/>
+        <NamedIndividual IRI="EDF"/>
+        <NamedIndividual IRI="EDF_Lab_les_Renardières"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="s4bldg:hasSpace"/>
+        <NamedIndividual IRI="EDF_Lab_les_Renardières"/>
+        <NamedIndividual IRI="K15_Building"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="s4bldg:hasSpace"/>
+        <NamedIndividual IRI="First_Floor"/>
+        <NamedIndividual IRI="first_floor_north"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="s4bldg:hasSpace"/>
+        <NamedIndividual IRI="First_Floor"/>
+        <NamedIndividual IRI="first_floor_south"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="s4bldg:hasSpace"/>
+        <NamedIndividual IRI="Ground"/>
+        <NamedIndividual IRI="RDCN"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="s4bldg:hasSpace"/>
+        <NamedIndividual IRI="Ground"/>
+        <NamedIndividual IRI="RDCS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="s4bldg:hasSpace"/>
+        <NamedIndividual IRI="K15_Building"/>
+        <NamedIndividual IRI="First_Floor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="s4bldg:hasSpace"/>
+        <NamedIndividual IRI="K15_Building"/>
+        <NamedIndividual IRI="Ground"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="seitoSMA:containsDevice"/>
+        <NamedIndividual IRI="Labo_K020"/>
+        <NamedIndividual IRI="POD2-00337"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="seitoSMA:containsDevice"/>
+        <NamedIndividual IRI="Local_Dtente_K011"/>
+        <NamedIndividual IRI="POD2-00335"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="seitoSMA:isPartOf"/>
+        <NamedIndividual IRI="POD2-00335"/>
+        <NamedIndividual IRI="Chauffage_RDCN"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="seitoSMA:isPartOf"/>
+        <NamedIndividual IRI="POD2-00337"/>
+        <NamedIndividual IRI="Chauffage_RDCN"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="seitoSMA:isPartOf"/>
+        <NamedIndividual IRI="POD2-00337"/>
+        <NamedIndividual IRI="Eclairage_RDCN"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="seitoSMA:isPartOf"/>
+        <NamedIndividual IRI="POD2-00338"/>
+        <NamedIndividual IRI="Chauffage_1erN"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="seitoSMA:isPartOf"/>
+        <NamedIndividual IRI="POD2-00338"/>
+        <NamedIndividual IRI="Eclairage_1erN"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="seitoSMA:isPartOf"/>
+        <NamedIndividual IRI="POD2-00340"/>
+        <NamedIndividual IRI="Chauffage_1erN"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="seitoSMA:isPartOf"/>
+        <NamedIndividual IRI="POD2-00340"/>
+        <NamedIndividual IRI="Eclairage_1erN"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="seitoSMA:isPartOf"/>
+        <NamedIndividual IRI="POD2-00341"/>
+        <NamedIndividual IRI="Chauffage_1erS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="seitoSMA:isPartOf"/>
+        <NamedIndividual IRI="POD2-00341"/>
+        <NamedIndividual IRI="Eclairage_1erS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="seitoSMA:containsAgent"/>
+        <NamedIndividual IRI="RDCN"/>
+        <NamedIndividual IRI="heationSysem_RDCN_agent_manager"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="seitoSMA:containsAgent"/>
+        <NamedIndividual IRI="RDCN"/>
+        <NamedIndividual IRI="lightingSysem_RDCN_agent_manager"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="seitoSMA:containsSystem"/>
+        <NamedIndividual IRI="RDCN"/>
+        <NamedIndividual IRI="Chauffage_RDCN"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="seitoSMA:containsSystem"/>
+        <NamedIndividual IRI="RDCN"/>
+        <NamedIndividual IRI="Eclairage_RDCN"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="seitoSMA:containsSystem"/>
+        <NamedIndividual IRI="RDCN"/>
+        <NamedIndividual IRI="PC_RDCN"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="s4bldg:hasSpace"/>
+        <NamedIndividual IRI="RDCN"/>
+        <NamedIndividual IRI="Labo_K020"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="s4bldg:hasSpace"/>
+        <NamedIndividual IRI="RDCN"/>
+        <NamedIndividual IRI="Local_Dtente_K011"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="s4bldg:hasSpace"/>
+        <NamedIndividual IRI="RDCN"/>
+        <NamedIndividual IRI="Room_K012"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="s4bldg:hasSpace"/>
+        <NamedIndividual IRI="RDCN"/>
+        <NamedIndividual IRI="Room_K013"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="s4bldg:hasSpace"/>
+        <NamedIndividual IRI="RDCN"/>
+        <NamedIndividual IRI="Room_K014"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="s4bldg:hasSpace"/>
+        <NamedIndividual IRI="RDCN"/>
+        <NamedIndividual IRI="Room_K015"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="s4bldg:hasSpace"/>
+        <NamedIndividual IRI="RDCN"/>
+        <NamedIndividual IRI="Room_K016"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="s4bldg:hasSpace"/>
+        <NamedIndividual IRI="RDCN"/>
+        <NamedIndividual IRI="Room_K017"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="s4bldg:hasSpace"/>
+        <NamedIndividual IRI="RDCN"/>
+        <NamedIndividual IRI="Sanitaire_K002"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="s4bldg:hasSpace"/>
+        <NamedIndividual IRI="RDCN"/>
+        <NamedIndividual IRI="Sanitaire_K0S1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="s4bldg:hasSpace"/>
+        <NamedIndividual IRI="RDCN"/>
+        <NamedIndividual IRI="Sanitaire_K0S2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="s4bldg:hasSpace"/>
+        <NamedIndividual IRI="RDCN"/>
+        <NamedIndividual IRI="0H3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="seitoSMA:containsAgent"/>
+        <NamedIndividual IRI="RDCS"/>
+        <NamedIndividual IRI="lightingSysem_RDCS_agent_manager"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="seitoSMA:containsSystem"/>
+        <NamedIndividual IRI="RDCS"/>
+        <NamedIndividual IRI="Eclairage_1erS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="s4bldg:hasSpace"/>
+        <NamedIndividual IRI="RDCS"/>
+        <NamedIndividual IRI="Labo_K002"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="s4bldg:hasSpace"/>
+        <NamedIndividual IRI="RDCS"/>
+        <NamedIndividual IRI="Labo_K003"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="s4bldg:hasSpace"/>
+        <NamedIndividual IRI="RDCS"/>
+        <NamedIndividual IRI="Labo_K004"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="s4bldg:hasSpace"/>
+        <NamedIndividual IRI="RDCS"/>
+        <NamedIndividual IRI="Labo_K005"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="s4bldg:hasSpace"/>
+        <NamedIndividual IRI="RDCS"/>
+        <NamedIndividual IRI="Labo_K006"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="s4bldg:hasSpace"/>
+        <NamedIndividual IRI="RDCS"/>
+        <NamedIndividual IRI="Labo_K010"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="s4bldg:hasSpace"/>
+        <NamedIndividual IRI="RDCS"/>
+        <NamedIndividual IRI="Local_Detente_K009"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="s4bldg:hasSpace"/>
+        <NamedIndividual IRI="RDCS"/>
+        <NamedIndividual IRI="Local_Technicien_K023"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="s4bldg:hasSpace"/>
+        <NamedIndividual IRI="RDCS"/>
+        <NamedIndividual IRI="Room_K001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="s4bldg:hasSpace"/>
+        <NamedIndividual IRI="RDCS"/>
+        <NamedIndividual IRI="Salle_de_Reunion_K007"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="s4bldg:hasSpace"/>
+        <NamedIndividual IRI="RDCS"/>
+        <NamedIndividual IRI="0H1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="s4bldg:hasSpace"/>
+        <NamedIndividual IRI="RDCS"/>
+        <NamedIndividual IRI="0H2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="s4bldg:hasSpace"/>
+        <NamedIndividual IRI="RDCS"/>
+        <NamedIndividual IRI="0H6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="seitoSMA:containsDevice"/>
+        <NamedIndividual IRI="Room_K016"/>
+        <NamedIndividual IRI="6102001000042"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="seitoSMA:containsDevice"/>
+        <NamedIndividual IRI="Room_K104"/>
+        <NamedIndividual IRI="6102001000165"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="seitoSMA:containsDevice"/>
+        <NamedIndividual IRI="Room_K108"/>
+        <NamedIndividual IRI="POD2-00341"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="seitoSMA:containsDevice"/>
+        <NamedIndividual IRI="Room_K111"/>
+        <NamedIndividual IRI="6102001000219"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="seitoSMA:containsDevice"/>
+        <NamedIndividual IRI="Room_K113"/>
+        <NamedIndividual IRI="POD2-00338"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="seitoSMA:containsDevice"/>
+        <NamedIndividual IRI="Room_K121"/>
+        <NamedIndividual IRI="6102001000103"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="seitoSMA:containsDevice"/>
+        <NamedIndividual IRI="Room_K123"/>
+        <NamedIndividual IRI="POD2-00340"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="seitoSMA:isTenantOf"/>
+        <NamedIndividual IRI="SEQUOIA"/>
+        <NamedIndividual IRI="EDF_Lab_les_Renardières"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="seitoSMA:occupies"/>
+        <NamedIndividual IRI="SEQUOIA"/>
+        <NamedIndividual IRI="first_floor_north"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="seitoSMA:manages"/>
+        <NamedIndividual IRI="airQualitySysem_RDCN_agent_manager"/>
+        <NamedIndividual IRI="PC_RDCN"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="seitoSMA:manages"/>
+        <NamedIndividual IRI="airQualitySysem_first_floor_north_agent_manager"/>
+        <NamedIndividual IRI="PC_1erN"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="seitoSMA:manages"/>
+        <NamedIndividual IRI="airQualitySysem_first_floor_south_agent_manager"/>
+        <NamedIndividual IRI="PC_1erS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="seitoSMA:containsAgent"/>
+        <NamedIndividual IRI="first_floor_north"/>
+        <NamedIndividual IRI="heationSysem_First_floor_North_agent_manager"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="seitoSMA:containsAgent"/>
+        <NamedIndividual IRI="first_floor_north"/>
+        <NamedIndividual IRI="lightingSysem_first_floor_north_agent_manager"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="seitoSMA:containsSystem"/>
+        <NamedIndividual IRI="first_floor_north"/>
+        <NamedIndividual IRI="Chauffage_1erN"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="seitoSMA:containsSystem"/>
+        <NamedIndividual IRI="first_floor_north"/>
+        <NamedIndividual IRI="Eclairage_1erN"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="seitoSMA:containsSystem"/>
+        <NamedIndividual IRI="first_floor_north"/>
+        <NamedIndividual IRI="PC_1erN"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="seitoSMA:containsSystem"/>
+        <NamedIndividual IRI="first_floor_north"/>
+        <NamedIndividual IRI="PC_back_up_1erN"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="s4bldg:hasSpace"/>
+        <NamedIndividual IRI="first_floor_north"/>
+        <NamedIndividual IRI="Room_K113"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="s4bldg:hasSpace"/>
+        <NamedIndividual IRI="first_floor_north"/>
+        <NamedIndividual IRI="Room_K114"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="s4bldg:hasSpace"/>
+        <NamedIndividual IRI="first_floor_north"/>
+        <NamedIndividual IRI="Room_K115"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="s4bldg:hasSpace"/>
+        <NamedIndividual IRI="first_floor_north"/>
+        <NamedIndividual IRI="Room_K116"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="s4bldg:hasSpace"/>
+        <NamedIndividual IRI="first_floor_north"/>
+        <NamedIndividual IRI="Room_K117"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="s4bldg:hasSpace"/>
+        <NamedIndividual IRI="first_floor_north"/>
+        <NamedIndividual IRI="Room_K118"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="s4bldg:hasSpace"/>
+        <NamedIndividual IRI="first_floor_north"/>
+        <NamedIndividual IRI="Room_K119"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="s4bldg:hasSpace"/>
+        <NamedIndividual IRI="first_floor_north"/>
+        <NamedIndividual IRI="Room_K120"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="s4bldg:hasSpace"/>
+        <NamedIndividual IRI="first_floor_north"/>
+        <NamedIndividual IRI="Room_K121"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="s4bldg:hasSpace"/>
+        <NamedIndividual IRI="first_floor_north"/>
+        <NamedIndividual IRI="Room_K122"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="s4bldg:hasSpace"/>
+        <NamedIndividual IRI="first_floor_north"/>
+        <NamedIndividual IRI="Room_K123"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="s4bldg:hasSpace"/>
+        <NamedIndividual IRI="first_floor_north"/>
+        <NamedIndividual IRI="Room_K124"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="s4bldg:hasSpace"/>
+        <NamedIndividual IRI="first_floor_north"/>
+        <NamedIndividual IRI="Room_K125"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="s4bldg:hasSpace"/>
+        <NamedIndividual IRI="first_floor_north"/>
+        <NamedIndividual IRI="Room_K126"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="s4bldg:hasSpace"/>
+        <NamedIndividual IRI="first_floor_north"/>
+        <NamedIndividual IRI="Room_K127"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="s4bldg:hasSpace"/>
+        <NamedIndividual IRI="first_floor_north"/>
+        <NamedIndividual IRI="1H2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="s4bldg:hasSpace"/>
+        <NamedIndividual IRI="first_floor_north"/>
+        <NamedIndividual IRI="1S3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="seitoSMA:containsAgent"/>
+        <NamedIndividual IRI="first_floor_south"/>
+        <NamedIndividual IRI="heationSysem_first_floor_south_agent_manager"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="seitoSMA:containsAgent"/>
+        <NamedIndividual IRI="first_floor_south"/>
+        <NamedIndividual IRI="lightingSysem_first_floor_south_agent_manager"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="seitoSMA:containsSystem"/>
+        <NamedIndividual IRI="first_floor_south"/>
+        <NamedIndividual IRI="Chauffage_1erS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="seitoSMA:containsSystem"/>
+        <NamedIndividual IRI="first_floor_south"/>
+        <NamedIndividual IRI="Eclairage_1erS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="seitoSMA:containsSystem"/>
+        <NamedIndividual IRI="first_floor_south"/>
+        <NamedIndividual IRI="PC_1erS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="seitoSMA:containsSystem"/>
+        <NamedIndividual IRI="first_floor_south"/>
+        <NamedIndividual IRI="PC_back_up_1erS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="s4bldg:hasSpace"/>
+        <NamedIndividual IRI="first_floor_south"/>
+        <NamedIndividual IRI="Room_K103"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="s4bldg:hasSpace"/>
+        <NamedIndividual IRI="first_floor_south"/>
+        <NamedIndividual IRI="Room_K105"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="s4bldg:hasSpace"/>
+        <NamedIndividual IRI="first_floor_south"/>
+        <NamedIndividual IRI="Room_K106"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="s4bldg:hasSpace"/>
+        <NamedIndividual IRI="first_floor_south"/>
+        <NamedIndividual IRI="Room_K107"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="s4bldg:hasSpace"/>
+        <NamedIndividual IRI="first_floor_south"/>
+        <NamedIndividual IRI="Room_K108"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="s4bldg:hasSpace"/>
+        <NamedIndividual IRI="first_floor_south"/>
+        <NamedIndividual IRI="Room_K110"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="s4bldg:hasSpace"/>
+        <NamedIndividual IRI="first_floor_south"/>
+        <NamedIndividual IRI="Room_K111"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="s4bldg:hasSpace"/>
+        <NamedIndividual IRI="first_floor_south"/>
+        <NamedIndividual IRI="Salle_de_Reunion_K102"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="s4bldg:hasSpace"/>
+        <NamedIndividual IRI="first_floor_south"/>
+        <NamedIndividual IRI="Serveur_Dep_K100"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="s4bldg:hasSpace"/>
+        <NamedIndividual IRI="first_floor_south"/>
+        <NamedIndividual IRI="1S1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="s4bldg:hasSpace"/>
+        <NamedIndividual IRI="first_floor_south"/>
+        <NamedIndividual IRI="1S2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="seitoSMA:manages"/>
+        <NamedIndividual IRI="heationSysem_First_floor_North_agent_manager"/>
+        <NamedIndividual IRI="Chauffage_1erN"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="seitoSMA:manages"/>
+        <NamedIndividual IRI="heationSysem_RDCN_agent_manager"/>
+        <NamedIndividual IRI="Chauffage_RDCN"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="seitoSMA:manages"/>
+        <NamedIndividual IRI="heationSysem_first_floor_south_agent_manager"/>
+        <NamedIndividual IRI="Chauffage_1erS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="seitoSMA:manages"/>
+        <NamedIndividual IRI="lightingSysem_RDCN_agent_manager"/>
+        <NamedIndividual IRI="Eclairage_RDCN"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="seitoSMA:manages"/>
+        <NamedIndividual IRI="lightingSysem_RDCS_agent_manager"/>
+        <NamedIndividual IRI="Eclairage_RDCN"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="seitoSMA:manages"/>
+        <NamedIndividual IRI="lightingSysem_first_floor_north_agent_manager"/>
+        <NamedIndividual IRI="Eclairage_1erN"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="seitoSMA:manages"/>
+        <NamedIndividual IRI="lightingSysem_first_floor_south_agent_manager"/>
+        <NamedIndividual IRI="Eclairage_1erS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="seitoSMA:isPartOf"/>
+        <NamedIndividual IRI="6102001000103"/>
+        <NamedIndividual IRI="Chauffage_1erN"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="seitoSMA:isPartOf"/>
+        <NamedIndividual IRI="6102001000103"/>
+        <NamedIndividual IRI="Eclairage_1erN"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="seitoSMA:isPartOf"/>
+        <NamedIndividual IRI="6102001000165"/>
+        <NamedIndividual IRI="Chauffage_1erS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="seitoSMA:isPartOf"/>
+        <NamedIndividual IRI="6102001000165"/>
+        <NamedIndividual IRI="Eclairage_1erS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="seitoSMA:isPartOf"/>
+        <NamedIndividual IRI="6102001000219"/>
+        <NamedIndividual IRI="Chauffage_1erS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="seitoSMA:isPartOf"/>
+        <NamedIndividual IRI="6102001000219"/>
+        <NamedIndividual IRI="Eclairage_1erS"/>
+    </ObjectPropertyAssertion>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="hasDevice"/>
+        <ObjectProperty abbreviatedIRI="seitoSMA:isPartOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="isOccupiedBy"/>
+        <ObjectProperty abbreviatedIRI="seitoSMA:occupies"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="isSpaceOf"/>
+        <ObjectProperty abbreviatedIRI="s4bldg:hasSpace"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="locatedIn"/>
+        <ObjectProperty abbreviatedIRI="seitoSMA:containsAgent"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="managedBy"/>
+        <ObjectProperty abbreviatedIRI="seitoSMA:manages"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="ownerBy"/>
+        <ObjectProperty abbreviatedIRI="seitoSMA:owns"/>
+    </InverseObjectProperties>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty abbreviatedIRI="seitoSMA:containsAgent"/>
+    </InverseFunctionalObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty abbreviatedIRI="s4bldg:hasSpace"/>
+    </TransitiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasDevice"/>
+        <Class abbreviatedIRI="seitoSMA:Systéme"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="is"/>
+        <Class abbreviatedIRI="seitoSMA:Owner"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="isOccupiedBy"/>
+        <Class abbreviatedIRI="seitoSMA:Space"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="isSpaceOf"/>
+        <Class abbreviatedIRI="s4bldg:BuildingSpace"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="locatedIn"/>
+        <Class abbreviatedIRI="seitoSMA:Agent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="managedBy"/>
+        <Class abbreviatedIRI="seitoSMA:Systéme"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="ownerBy"/>
+        <Class abbreviatedIRI="seitoSMA:Space"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="ownerBy"/>
+        <Class abbreviatedIRI="s4bldg:Building"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="seitoSMA:canAccess"/>
+        <Class abbreviatedIRI="seitoSMA:Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="seitoSMA:canInstall"/>
+        <Class abbreviatedIRI="seitoSMA:Tenant"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="seitoSMA:canInteract"/>
+        <Class abbreviatedIRI="seitoSMA:Tenant"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="seitoSMA:canUse"/>
+        <Class abbreviatedIRI="seitoSMA:Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="seitoSMA:containsAgent"/>
+        <Class abbreviatedIRI="seitoSMA:Space"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="seitoSMA:containsDevice"/>
+        <Class abbreviatedIRI="seitoSMA:Space"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="seitoSMA:containsSystem"/>
+        <Class abbreviatedIRI="seitoSMA:Space"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="seitoSMA:hasOccupiant"/>
+        <Class abbreviatedIRI="seitoSMA:Tenant"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="seitoSMA:hasPerson"/>
+        <Class IRI="Building"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="seitoSMA:hasVisitor"/>
+        <Class abbreviatedIRI="seitoSMA:Tenant"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="seitoSMA:isPartOf"/>
+        <Class abbreviatedIRI="seitoSMA:Device"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="seitoSMA:isTenantOf"/>
+        <Class abbreviatedIRI="seitoSMA:Tenant"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="seitoSMA:manages"/>
+        <Class abbreviatedIRI="seitoSMA:Agent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="seitoSMA:occupies"/>
+        <Class abbreviatedIRI="seitoSMA:Tenant"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="seitoSMA:offers"/>
+        <Class abbreviatedIRI="seitoSMA:Device"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="seitoSMA:offers"/>
+        <Class abbreviatedIRI="seitoSMA:Systéme"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="seitoSMA:owns"/>
+        <Class abbreviatedIRI="seitoSMA:Owner"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="s4bldg:hasSpace"/>
+        <Class IRI="Building"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasDevice"/>
+        <Class abbreviatedIRI="saref:Device"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="is"/>
+        <Class abbreviatedIRI="seitoSMA:Tenant"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="isOccupiedBy"/>
+        <Class abbreviatedIRI="seitoSMA:Tenant"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="isSpaceOf"/>
+        <Class abbreviatedIRI="s4bldg:BuildingSpace"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="locatedIn"/>
+        <Class abbreviatedIRI="seitoSMA:Space"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="managedBy"/>
+        <Class abbreviatedIRI="seitoSMA:Agent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="ownerBy"/>
+        <Class abbreviatedIRI="seitoSMA:Owner"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="seitoSMA:canAccess"/>
+        <Class abbreviatedIRI="seitoSMA:Space"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="seitoSMA:canInstall"/>
+        <Class abbreviatedIRI="seitoSMA:Systéme"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="seitoSMA:canInteract"/>
+        <Class abbreviatedIRI="seitoSMA:Agent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="seitoSMA:canUse"/>
+        <Class abbreviatedIRI="seitoSMA:Service"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="seitoSMA:containsAgent"/>
+        <Class abbreviatedIRI="seitoSMA:Agent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="seitoSMA:containsDevice"/>
+        <Class abbreviatedIRI="seitoSMA:Device"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="seitoSMA:containsSystem"/>
+        <Class abbreviatedIRI="seitoSMA:Systéme"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="seitoSMA:hasOccupiant"/>
+        <Class abbreviatedIRI="seitoSMA:Occopiant"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="seitoSMA:hasPerson"/>
+        <Class abbreviatedIRI="seitoSMA:Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="seitoSMA:hasVisitor"/>
+        <Class abbreviatedIRI="seitoSMA:Visitor"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="seitoSMA:isPartOf"/>
+        <Class abbreviatedIRI="seitoSMA:Systéme"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="seitoSMA:isTenantOf"/>
+        <Class IRI="Building"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="seitoSMA:manages"/>
+        <Class abbreviatedIRI="seitoSMA:Systéme"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="seitoSMA:occupies"/>
+        <Class abbreviatedIRI="seitoSMA:Space"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="seitoSMA:offers"/>
+        <Class abbreviatedIRI="seitoSMA:Service"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="seitoSMA:owns"/>
+        <Class IRI="Building"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="seitoSMA:owns"/>
+        <Class abbreviatedIRI="seitoSMA:Space"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="s4bldg:hasSpace"/>
+        <Class abbreviatedIRI="seitoSMA:Space"/>
+    </ObjectPropertyRange>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S2</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="Building"/>
+                <Variable IRI="b"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class abbreviatedIRI="seitoSMA:Space"/>
+                <Variable IRI="sp"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class abbreviatedIRI="seitoSMA:Systéme"/>
+                <Variable IRI="sys"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty abbreviatedIRI="s4bldg:hasSpace"/>
+                <Variable IRI="b"/>
+                <Variable IRI="sp"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty abbreviatedIRI="seitoSMA:containsSystem"/>
+                <Variable IRI="sp"/>
+                <Variable IRI="sys"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty abbreviatedIRI="seitoSMA:containsSystem"/>
+                <Variable IRI="b"/>
+                <Variable IRI="sys"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Si un agent manage un systeme alors il manage aussi le service offert par ce systeme</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S1</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class abbreviatedIRI="seitoSMA:Systéme"/>
+                <Variable IRI="s"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class abbreviatedIRI="seitoSMA:Agent"/>
+                <Variable IRI="a"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class abbreviatedIRI="seitoSMA:Service"/>
+                <Variable IRI="ser"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty abbreviatedIRI="seitoSMA:manages"/>
+                <Variable IRI="a"/>
+                <Variable IRI="s"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty abbreviatedIRI="seitoSMA:offers"/>
+                <Variable IRI="s"/>
+                <Variable IRI="ser"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty abbreviatedIRI="seitoSMA:manages"/>
+                <Variable IRI="a"/>
+                <Variable IRI="ser"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Si un locataire occupes un espace et que cette espace dispose d&apos;un systeme qui offre un service alors le locataire peut utiliser ce service</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S3</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class abbreviatedIRI="seitoSMA:Tenant"/>
+                <Variable IRI="t"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class abbreviatedIRI="seitoSMA:Space"/>
+                <Variable IRI="sp"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class abbreviatedIRI="seitoSMA:Systéme"/>
+                <Variable IRI="s"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class abbreviatedIRI="seitoSMA:Service"/>
+                <Variable IRI="serv"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty abbreviatedIRI="seitoSMA:occupies"/>
+                <Variable IRI="t"/>
+                <Variable IRI="sp"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty abbreviatedIRI="seitoSMA:containsSystem"/>
+                <Variable IRI="sp"/>
+                <Variable IRI="s"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty abbreviatedIRI="seitoSMA:offers"/>
+                <Variable IRI="s"/>
+                <Variable IRI="serv"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty abbreviatedIRI="seitoSMA:canUse"/>
+                <Variable IRI="t"/>
+                <Variable IRI="serv"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Building</IRI>
+        <Literal>Building</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>is</IRI>
+        <Literal>is</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>seitoSMA:Agent</AbbreviatedIRI>
+        <Literal>Agent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>seitoSMA:Device</AbbreviatedIRI>
+        <Literal>Device</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>seitoSMA:Occopiant</AbbreviatedIRI>
+        <Literal>Occopiant</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>seitoSMA:Owner</AbbreviatedIRI>
+        <Literal>Owner</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>seitoSMA:Person</AbbreviatedIRI>
+        <Literal>Person</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>seitoSMA:Service</AbbreviatedIRI>
+        <Literal>Service</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>seitoSMA:Space</AbbreviatedIRI>
+        <Literal>Space</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>seitoSMA:Systéme</AbbreviatedIRI>
+        <Literal>Systéme</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>seitoSMA:Tenant</AbbreviatedIRI>
+        <Literal>Tenant</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>seitoSMA:Visitor</AbbreviatedIRI>
+        <Literal>Visitor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>seitoSMA:canAccess</AbbreviatedIRI>
+        <Literal>can access</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>seitoSMA:canInstall</AbbreviatedIRI>
+        <Literal>can install</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>seitoSMA:canInteract</AbbreviatedIRI>
+        <Literal>can interact</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>seitoSMA:canUse</AbbreviatedIRI>
+        <Literal>can use</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>seitoSMA:containsAgent</AbbreviatedIRI>
+        <Literal>contains agent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>seitoSMA:containsDevice</AbbreviatedIRI>
+        <Literal>contains device</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>seitoSMA:containsSystem</AbbreviatedIRI>
+        <Literal>contains system</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>seitoSMA:hasOccupiant</AbbreviatedIRI>
+        <Literal>has occupiant</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>seitoSMA:hasPerson</AbbreviatedIRI>
+        <Literal>has person</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>seitoSMA:hasVisitor</AbbreviatedIRI>
+        <Literal>has visitor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>seitoSMA:isPartOf</AbbreviatedIRI>
+        <Literal>is part of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>seitoSMA:isTenantOf</AbbreviatedIRI>
+        <Literal>is tenant of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>seitoSMA:manages</AbbreviatedIRI>
+        <Literal>manages</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>seitoSMA:occupies</AbbreviatedIRI>
+        <Literal>occupies</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>seitoSMA:offers</AbbreviatedIRI>
+        <Literal>offers</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>seitoSMA:owns</AbbreviatedIRI>
+        <Literal>owns</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>saref:Device</AbbreviatedIRI>
+        <Literal>Device</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>saref:Service</AbbreviatedIRI>
+        <Literal>Service</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>s4bldg:Building</AbbreviatedIRI>
+        <Literal>Building</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>s4bldg:BuildingSpace</AbbreviatedIRI>
+        <Literal>Building Space</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>s4bldg:hasSpace</AbbreviatedIRI>
+        <Literal>has space</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+

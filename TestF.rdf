@@ -1,0 +1,1829 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://seitoSMA#"
+     xml:base="http://seitoSMA"
+     xmlns:mod="https://w3id.org/mod#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:saref="https://saref.etsi.org/core/v3.2.1/"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:s4bldg="https://saref.etsi.org/saref4bldg/"
+     xmlns:seitoSMA="http://www.owl-ontologies.com/seitoSMA#">
+    <owl:Ontology rdf:about="http://seitoSMA#">
+        <owl:backwardCompatibleWith rdf:resource="https://w3id.org/example/1.0.0"/>
+        <owl:incompatibleWith rdf:resource="https://w3id.org/example/0.2.0"/>
+        <owl:priorVersion rdf:resource="https://w3id.org/example/1.0.0"/>
+        <owl:versionInfo>0.0.1</owl:versionInfo>
+        <mod:createdWith rdf:resource="https://chowlk.linkeddata.es/"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#backwardCompatibleWith -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#backwardCompatibleWith"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#incompatibleWith -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#incompatibleWith"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#priorVersion -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#priorVersion"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#versionInfo -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#versionInfo"/>
+    
+
+
+    <!-- https://w3id.org/mod#createdWith -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/mod#createdWith"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://seitoSMA#hasDevice -->
+
+    <owl:ObjectProperty rdf:about="http://seitoSMA#hasDevice">
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/seitoSMA#isPartOf"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/seitoSMA#Systéme"/>
+        <rdfs:range rdf:resource="https://saref.etsi.org/core/v3.2.1/Device"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://seitoSMA#is -->
+
+    <owl:ObjectProperty rdf:about="http://seitoSMA#is">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/seitoSMA#Owner"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/seitoSMA#Tenant"/>
+        <rdfs:label>is</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://seitoSMA#isOccupiedBy -->
+
+    <owl:ObjectProperty rdf:about="http://seitoSMA#isOccupiedBy">
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/seitoSMA#occupies"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/seitoSMA#Space"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/seitoSMA#Tenant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://seitoSMA#isSpaceOf -->
+
+    <owl:ObjectProperty rdf:about="http://seitoSMA#isSpaceOf">
+        <owl:inverseOf rdf:resource="https://saref.etsi.org/saref4bldg/hasSpace"/>
+        <rdfs:domain rdf:resource="https://saref.etsi.org/saref4bldg/BuildingSpace"/>
+        <rdfs:range rdf:resource="https://saref.etsi.org/saref4bldg/BuildingSpace"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://seitoSMA#locatedIn -->
+
+    <owl:ObjectProperty rdf:about="http://seitoSMA#locatedIn">
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/seitoSMA#containsAgent"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/seitoSMA#Agent"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/seitoSMA#Space"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://seitoSMA#managedBy -->
+
+    <owl:ObjectProperty rdf:about="http://seitoSMA#managedBy">
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/seitoSMA#manages"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/seitoSMA#Systéme"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/seitoSMA#Agent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://seitoSMA#ownerBy -->
+
+    <owl:ObjectProperty rdf:about="http://seitoSMA#ownerBy">
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/seitoSMA#owns"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/seitoSMA#Space"/>
+        <rdfs:domain rdf:resource="https://saref.etsi.org/saref4bldg/Building"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/seitoSMA#Owner"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/seitoSMA#canAccess -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/seitoSMA#canAccess">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/seitoSMA#Person"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/seitoSMA#Space"/>
+        <rdfs:label>can access</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/seitoSMA#canInstall -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/seitoSMA#canInstall">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/seitoSMA#Tenant"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/seitoSMA#Systéme"/>
+        <rdfs:label>can install</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/seitoSMA#canInteract -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/seitoSMA#canInteract">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/seitoSMA#Tenant"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/seitoSMA#Agent"/>
+        <rdfs:label>can interact</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/seitoSMA#canUse -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/seitoSMA#canUse">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/seitoSMA#Person"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/seitoSMA#Service"/>
+        <rdfs:label>can use</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/seitoSMA#containsAgent -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/seitoSMA#containsAgent">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/seitoSMA#Space"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/seitoSMA#Agent"/>
+        <rdfs:label>contains agent</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/seitoSMA#containsDevice -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/seitoSMA#containsDevice">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/seitoSMA#Space"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/seitoSMA#Device"/>
+        <rdfs:label>contains device</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/seitoSMA#containsSystem -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/seitoSMA#containsSystem">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/seitoSMA#Space"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/seitoSMA#Systéme"/>
+        <rdfs:label>contains system</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/seitoSMA#hasOccupiant -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/seitoSMA#hasOccupiant">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/seitoSMA#Tenant"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/seitoSMA#Occopiant"/>
+        <rdfs:label>has occupiant</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/seitoSMA#hasPerson -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/seitoSMA#hasPerson">
+        <rdfs:domain rdf:resource="http://seitoSMA#Building"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/seitoSMA#Person"/>
+        <rdfs:label>has person</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/seitoSMA#hasVisitor -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/seitoSMA#hasVisitor">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/seitoSMA#Tenant"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/seitoSMA#Visitor"/>
+        <rdfs:label>has visitor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/seitoSMA#isPartOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/seitoSMA#isPartOf">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/seitoSMA#Device"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/seitoSMA#Systéme"/>
+        <rdfs:label>is part of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/seitoSMA#isTenantOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/seitoSMA#isTenantOf">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/seitoSMA#Tenant"/>
+        <rdfs:range rdf:resource="http://seitoSMA#Building"/>
+        <rdfs:label>is tenant of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/seitoSMA#manages -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/seitoSMA#manages">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/seitoSMA#Agent"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/seitoSMA#Systéme"/>
+        <rdfs:label>manages</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/seitoSMA#occupies -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/seitoSMA#occupies">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/seitoSMA#Tenant"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/seitoSMA#Space"/>
+        <rdfs:label>occupies</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/seitoSMA#offers -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/seitoSMA#offers">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/seitoSMA#Device"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/seitoSMA#Systéme"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/seitoSMA#Service"/>
+        <rdfs:label>offers</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/seitoSMA#owns -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/seitoSMA#owns">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/seitoSMA#Owner"/>
+        <rdfs:range rdf:resource="http://seitoSMA#Building"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/seitoSMA#Space"/>
+        <rdfs:label>owns</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/saref4bldg/hasSpace -->
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4bldg/hasSpace">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://seitoSMA#Building"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/seitoSMA#Space"/>
+        <rdfs:label>has space</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://seitoSMA#AirQualityAgentManager -->
+
+    <owl:Class rdf:about="http://seitoSMA#AirQualityAgentManager">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/seitoSMA#Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://seitoSMA#AirQualitySystem -->
+
+    <owl:Class rdf:about="http://seitoSMA#AirQualitySystem">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/seitoSMA#Systéme"/>
+    </owl:Class>
+    
+
+
+    <!-- http://seitoSMA#Building -->
+
+    <owl:Class rdf:about="http://seitoSMA#Building">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/saref4bldg/Building"/>
+        <rdfs:label>Building</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://seitoSMA#Floor -->
+
+    <owl:Class rdf:about="http://seitoSMA#Floor">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/seitoSMA#Space"/>
+    </owl:Class>
+    
+
+
+    <!-- http://seitoSMA#HeatingAgentManager -->
+
+    <owl:Class rdf:about="http://seitoSMA#HeatingAgentManager">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/seitoSMA#Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://seitoSMA#HeatingSystem -->
+
+    <owl:Class rdf:about="http://seitoSMA#HeatingSystem">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/seitoSMA#Systéme"/>
+    </owl:Class>
+    
+
+
+    <!-- http://seitoSMA#LightingAgentManager -->
+
+    <owl:Class rdf:about="http://seitoSMA#LightingAgentManager">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/seitoSMA#Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://seitoSMA#LightingSystem -->
+
+    <owl:Class rdf:about="http://seitoSMA#LightingSystem">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/seitoSMA#Systéme"/>
+    </owl:Class>
+    
+
+
+    <!-- http://seitoSMA#Room -->
+
+    <owl:Class rdf:about="http://seitoSMA#Room">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/seitoSMA#Space"/>
+    </owl:Class>
+    
+
+
+    <!-- http://seitoSMA#Zone -->
+
+    <owl:Class rdf:about="http://seitoSMA#Zone">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/seitoSMA#Space"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/seitoSMA#Agent -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/seitoSMA#Agent">
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://seitoSMA#AirQualityAgentManager"/>
+            <rdf:Description rdf:about="http://seitoSMA#HeatingAgentManager"/>
+            <rdf:Description rdf:about="http://seitoSMA#LightingAgentManager"/>
+        </owl:disjointUnionOf>
+        <rdfs:label>Agent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/seitoSMA#Device -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/seitoSMA#Device">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/v3.2.1/Device"/>
+        <rdfs:label>Device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/seitoSMA#Occopiant -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/seitoSMA#Occopiant">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/seitoSMA#Person"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/seitoSMA#Visitor"/>
+        <rdfs:label>Occopiant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/seitoSMA#Owner -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/seitoSMA#Owner">
+        <rdfs:label>Owner</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/seitoSMA#Person -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/seitoSMA#Person">
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.owl-ontologies.com/seitoSMA#Occopiant"/>
+            <rdf:Description rdf:about="http://www.owl-ontologies.com/seitoSMA#Visitor"/>
+        </owl:disjointUnionOf>
+        <rdfs:label>Person</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/seitoSMA#Service -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/seitoSMA#Service">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/v3.2.1/Service"/>
+        <rdfs:label>Service</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/seitoSMA#Space -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/seitoSMA#Space">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/saref4bldg/BuildingSpace"/>
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://seitoSMA#Floor"/>
+            <rdf:Description rdf:about="http://seitoSMA#Room"/>
+            <rdf:Description rdf:about="http://seitoSMA#Zone"/>
+        </owl:disjointUnionOf>
+        <rdfs:label>Space</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/seitoSMA#Systéme -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/seitoSMA#Systéme">
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://seitoSMA#AirQualitySystem"/>
+            <rdf:Description rdf:about="http://seitoSMA#HeatingSystem"/>
+            <rdf:Description rdf:about="http://seitoSMA#LightingSystem"/>
+        </owl:disjointUnionOf>
+        <rdfs:label>Systéme</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/seitoSMA#Tenant -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/seitoSMA#Tenant">
+        <rdfs:label>Tenant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/seitoSMA#Visitor -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/seitoSMA#Visitor">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/seitoSMA#Person"/>
+        <rdfs:label>Visitor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/v3.2.1/Device -->
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/v3.2.1/Device">
+        <rdfs:label>Device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/v3.2.1/Service -->
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/v3.2.1/Service">
+        <rdfs:label>Service</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/saref4bldg/Building -->
+
+    <owl:Class rdf:about="https://saref.etsi.org/saref4bldg/Building">
+        <rdfs:label>Building</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/saref4bldg/BuildingSpace -->
+
+    <owl:Class rdf:about="https://saref.etsi.org/saref4bldg/BuildingSpace">
+        <rdfs:label>Building Space</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://seitoSMA#Chauffage_1erN -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#Chauffage_1erN">
+        <rdf:type rdf:resource="http://seitoSMA#HeatingSystem"/>
+        <seitoSMA:offers rdf:resource="http://seitoSMA#heating_service"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#Chauffage_1erS -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#Chauffage_1erS">
+        <rdf:type rdf:resource="http://seitoSMA#HeatingSystem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#Chauffage_RDCN -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#Chauffage_RDCN">
+        <rdf:type rdf:resource="http://seitoSMA#HeatingSystem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#EDF -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#EDF">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/seitoSMA#Owner"/>
+        <seitoSMA:owns rdf:resource="http://seitoSMA#EDF_Lab_les_Renardières"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#EDF_Lab_les_Renardières -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#EDF_Lab_les_Renardières">
+        <rdf:type rdf:resource="http://seitoSMA#Building"/>
+        <s4bldg:hasSpace rdf:resource="http://seitoSMA#K15_Building"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#Eclairage_1erN -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#Eclairage_1erN">
+        <rdf:type rdf:resource="http://seitoSMA#LightingSystem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#Eclairage_1erS -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#Eclairage_1erS">
+        <rdf:type rdf:resource="http://seitoSMA#LightingSystem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#Eclairage_RDCN -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#Eclairage_RDCN">
+        <rdf:type rdf:resource="http://seitoSMA#LightingSystem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#First_Floor -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#First_Floor">
+        <rdf:type rdf:resource="http://seitoSMA#Floor"/>
+        <s4bldg:hasSpace rdf:resource="http://seitoSMA#first_floor_north"/>
+        <s4bldg:hasSpace rdf:resource="http://seitoSMA#first_floor_south"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#Ground -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#Ground">
+        <rdf:type rdf:resource="http://seitoSMA#Floor"/>
+        <s4bldg:hasSpace rdf:resource="http://seitoSMA#RDCN"/>
+        <s4bldg:hasSpace rdf:resource="http://seitoSMA#RDCS"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#K15_Building -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#K15_Building">
+        <rdf:type rdf:resource="http://seitoSMA#Zone"/>
+        <s4bldg:hasSpace rdf:resource="http://seitoSMA#First_Floor"/>
+        <s4bldg:hasSpace rdf:resource="http://seitoSMA#Ground"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#Labo_K002 -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#Labo_K002">
+        <rdf:type rdf:resource="http://seitoSMA#Room"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#Labo_K003 -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#Labo_K003">
+        <rdf:type rdf:resource="http://seitoSMA#Room"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#Labo_K004 -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#Labo_K004">
+        <rdf:type rdf:resource="http://seitoSMA#Room"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#Labo_K005 -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#Labo_K005">
+        <rdf:type rdf:resource="http://seitoSMA#Room"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#Labo_K006 -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#Labo_K006">
+        <rdf:type rdf:resource="http://seitoSMA#Room"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#Labo_K010 -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#Labo_K010">
+        <rdf:type rdf:resource="http://seitoSMA#Room"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#Labo_K020 -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#Labo_K020">
+        <rdf:type rdf:resource="http://seitoSMA#Room"/>
+        <seitoSMA:containsDevice rdf:resource="http://seitoSMA#POD2-00337"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#Local_Detente_K009 -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#Local_Detente_K009">
+        <rdf:type rdf:resource="http://seitoSMA#Room"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#Local_Dtente_K011 -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#Local_Dtente_K011">
+        <rdf:type rdf:resource="http://seitoSMA#Room"/>
+        <seitoSMA:containsDevice rdf:resource="http://seitoSMA#POD2-00335"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#Local_Technicien_K023 -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#Local_Technicien_K023">
+        <rdf:type rdf:resource="http://seitoSMA#Room"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#PC_1erN -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#PC_1erN">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/seitoSMA#Systéme"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#PC_1erS -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#PC_1erS">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/seitoSMA#Systéme"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#PC_RDCN -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#PC_RDCN">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/seitoSMA#Systéme"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#PC_back_up_1erN -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#PC_back_up_1erN">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/seitoSMA#Systéme"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#PC_back_up_1erS -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#PC_back_up_1erS">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/seitoSMA#Systéme"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#POD2-00335 -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#POD2-00335">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/seitoSMA#Device"/>
+        <seitoSMA:isPartOf rdf:resource="http://seitoSMA#Chauffage_RDCN"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#POD2-00337 -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#POD2-00337">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/seitoSMA#Device"/>
+        <seitoSMA:isPartOf rdf:resource="http://seitoSMA#Chauffage_RDCN"/>
+        <seitoSMA:isPartOf rdf:resource="http://seitoSMA#Eclairage_RDCN"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#POD2-00338 -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#POD2-00338">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/seitoSMA#Device"/>
+        <seitoSMA:isPartOf rdf:resource="http://seitoSMA#Chauffage_1erN"/>
+        <seitoSMA:isPartOf rdf:resource="http://seitoSMA#Eclairage_1erN"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#POD2-00340 -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#POD2-00340">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/seitoSMA#Device"/>
+        <seitoSMA:isPartOf rdf:resource="http://seitoSMA#Chauffage_1erN"/>
+        <seitoSMA:isPartOf rdf:resource="http://seitoSMA#Eclairage_1erN"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#POD2-00341 -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#POD2-00341">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/seitoSMA#Device"/>
+        <seitoSMA:isPartOf rdf:resource="http://seitoSMA#Chauffage_1erS"/>
+        <seitoSMA:isPartOf rdf:resource="http://seitoSMA#Eclairage_1erS"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#RDCN -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#RDCN">
+        <rdf:type rdf:resource="http://seitoSMA#Zone"/>
+        <seitoSMA:containsAgent rdf:resource="http://seitoSMA#heationSysem_RDCN_agent_manager"/>
+        <seitoSMA:containsAgent rdf:resource="http://seitoSMA#lightingSysem_RDCN_agent_manager"/>
+        <seitoSMA:containsSystem rdf:resource="http://seitoSMA#Chauffage_RDCN"/>
+        <seitoSMA:containsSystem rdf:resource="http://seitoSMA#Eclairage_RDCN"/>
+        <seitoSMA:containsSystem rdf:resource="http://seitoSMA#PC_RDCN"/>
+        <s4bldg:hasSpace rdf:resource="http://seitoSMA#Labo_K020"/>
+        <s4bldg:hasSpace rdf:resource="http://seitoSMA#Local_Dtente_K011"/>
+        <s4bldg:hasSpace rdf:resource="http://seitoSMA#Room_K012"/>
+        <s4bldg:hasSpace rdf:resource="http://seitoSMA#Room_K013"/>
+        <s4bldg:hasSpace rdf:resource="http://seitoSMA#Room_K014"/>
+        <s4bldg:hasSpace rdf:resource="http://seitoSMA#Room_K015"/>
+        <s4bldg:hasSpace rdf:resource="http://seitoSMA#Room_K016"/>
+        <s4bldg:hasSpace rdf:resource="http://seitoSMA#Room_K017"/>
+        <s4bldg:hasSpace rdf:resource="http://seitoSMA#Sanitaire_K002"/>
+        <s4bldg:hasSpace rdf:resource="http://seitoSMA#Sanitaire_K0S1"/>
+        <s4bldg:hasSpace rdf:resource="http://seitoSMA#Sanitaire_K0S2"/>
+        <s4bldg:hasSpace rdf:resource="http://seitoSMA#0H3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#RDCS -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#RDCS">
+        <rdf:type rdf:resource="http://seitoSMA#Zone"/>
+        <seitoSMA:containsAgent rdf:resource="http://seitoSMA#lightingSysem_RDCS_agent_manager"/>
+        <seitoSMA:containsSystem rdf:resource="http://seitoSMA#Eclairage_1erS"/>
+        <s4bldg:hasSpace rdf:resource="http://seitoSMA#Labo_K002"/>
+        <s4bldg:hasSpace rdf:resource="http://seitoSMA#Labo_K003"/>
+        <s4bldg:hasSpace rdf:resource="http://seitoSMA#Labo_K004"/>
+        <s4bldg:hasSpace rdf:resource="http://seitoSMA#Labo_K005"/>
+        <s4bldg:hasSpace rdf:resource="http://seitoSMA#Labo_K006"/>
+        <s4bldg:hasSpace rdf:resource="http://seitoSMA#Labo_K010"/>
+        <s4bldg:hasSpace rdf:resource="http://seitoSMA#Local_Detente_K009"/>
+        <s4bldg:hasSpace rdf:resource="http://seitoSMA#Local_Technicien_K023"/>
+        <s4bldg:hasSpace rdf:resource="http://seitoSMA#Room_K001"/>
+        <s4bldg:hasSpace rdf:resource="http://seitoSMA#Salle_de_Reunion_K007"/>
+        <s4bldg:hasSpace rdf:resource="http://seitoSMA#0H1"/>
+        <s4bldg:hasSpace rdf:resource="http://seitoSMA#0H2"/>
+        <s4bldg:hasSpace rdf:resource="http://seitoSMA#0H6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#Room_K001 -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#Room_K001">
+        <rdf:type rdf:resource="http://seitoSMA#Room"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#Room_K012 -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#Room_K012">
+        <rdf:type rdf:resource="http://seitoSMA#Room"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#Room_K013 -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#Room_K013">
+        <rdf:type rdf:resource="http://seitoSMA#Room"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#Room_K014 -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#Room_K014">
+        <rdf:type rdf:resource="http://seitoSMA#Room"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#Room_K015 -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#Room_K015">
+        <rdf:type rdf:resource="http://seitoSMA#Room"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#Room_K016 -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#Room_K016">
+        <rdf:type rdf:resource="http://seitoSMA#Room"/>
+        <seitoSMA:containsDevice rdf:resource="http://seitoSMA#6102001000042"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#Room_K017 -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#Room_K017">
+        <rdf:type rdf:resource="http://seitoSMA#Room"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#Room_K101 -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#Room_K101">
+        <rdf:type rdf:resource="http://seitoSMA#Room"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#Room_K103 -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#Room_K103">
+        <rdf:type rdf:resource="http://seitoSMA#Room"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#Room_K104 -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#Room_K104">
+        <rdf:type rdf:resource="http://seitoSMA#Room"/>
+        <seitoSMA:containsDevice rdf:resource="http://seitoSMA#6102001000165"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#Room_K105 -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#Room_K105">
+        <rdf:type rdf:resource="http://seitoSMA#Room"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#Room_K106 -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#Room_K106">
+        <rdf:type rdf:resource="http://seitoSMA#Room"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#Room_K107 -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#Room_K107">
+        <rdf:type rdf:resource="http://seitoSMA#Room"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#Room_K108 -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#Room_K108">
+        <rdf:type rdf:resource="http://seitoSMA#Room"/>
+        <seitoSMA:containsDevice rdf:resource="http://seitoSMA#POD2-00341"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#Room_K109 -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#Room_K109">
+        <rdf:type rdf:resource="http://seitoSMA#Room"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#Room_K110 -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#Room_K110">
+        <rdf:type rdf:resource="http://seitoSMA#Room"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#Room_K111 -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#Room_K111">
+        <rdf:type rdf:resource="http://seitoSMA#Room"/>
+        <seitoSMA:containsDevice rdf:resource="http://seitoSMA#6102001000219"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#Room_K112 -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#Room_K112">
+        <rdf:type rdf:resource="http://seitoSMA#Room"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#Room_K113 -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#Room_K113">
+        <rdf:type rdf:resource="http://seitoSMA#Room"/>
+        <seitoSMA:containsDevice rdf:resource="http://seitoSMA#POD2-00338"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#Room_K114 -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#Room_K114">
+        <rdf:type rdf:resource="http://seitoSMA#Room"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#Room_K115 -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#Room_K115">
+        <rdf:type rdf:resource="http://seitoSMA#Room"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#Room_K116 -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#Room_K116">
+        <rdf:type rdf:resource="http://seitoSMA#Room"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#Room_K117 -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#Room_K117">
+        <rdf:type rdf:resource="http://seitoSMA#Room"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#Room_K118 -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#Room_K118">
+        <rdf:type rdf:resource="http://seitoSMA#Room"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#Room_K119 -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#Room_K119">
+        <rdf:type rdf:resource="http://seitoSMA#Room"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#Room_K120 -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#Room_K120">
+        <rdf:type rdf:resource="http://seitoSMA#Room"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#Room_K121 -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#Room_K121">
+        <rdf:type rdf:resource="http://seitoSMA#Room"/>
+        <seitoSMA:containsDevice rdf:resource="http://seitoSMA#6102001000103"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#Room_K122 -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#Room_K122">
+        <rdf:type rdf:resource="http://seitoSMA#Room"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#Room_K123 -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#Room_K123">
+        <rdf:type rdf:resource="http://seitoSMA#Room"/>
+        <seitoSMA:containsDevice rdf:resource="http://seitoSMA#POD2-00340"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#Room_K124 -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#Room_K124">
+        <rdf:type rdf:resource="http://seitoSMA#Room"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#Room_K125 -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#Room_K125">
+        <rdf:type rdf:resource="http://seitoSMA#Room"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#Room_K126 -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#Room_K126">
+        <rdf:type rdf:resource="http://seitoSMA#Room"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#Room_K127 -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#Room_K127">
+        <rdf:type rdf:resource="http://seitoSMA#Room"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#SEQUOIA -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#SEQUOIA">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/seitoSMA#Tenant"/>
+        <seitoSMA:isTenantOf rdf:resource="http://seitoSMA#EDF_Lab_les_Renardières"/>
+        <seitoSMA:occupies rdf:resource="http://seitoSMA#first_floor_north"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#Salle_de_Reunion_K007 -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#Salle_de_Reunion_K007">
+        <rdf:type rdf:resource="http://seitoSMA#Room"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#Salle_de_Reunion_K102 -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#Salle_de_Reunion_K102">
+        <rdf:type rdf:resource="http://seitoSMA#Room"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#Sanitaire_K002 -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#Sanitaire_K002">
+        <rdf:type rdf:resource="http://seitoSMA#Room"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#Sanitaire_K0S1 -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#Sanitaire_K0S1">
+        <rdf:type rdf:resource="http://seitoSMA#Room"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#Sanitaire_K0S2 -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#Sanitaire_K0S2">
+        <rdf:type rdf:resource="http://seitoSMA#Room"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#Serveur_Dep_K100 -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#Serveur_Dep_K100">
+        <rdf:type rdf:resource="http://seitoSMA#Room"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#agentTest -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#agentTest">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/seitoSMA#Agent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#airQualitySysem_RDCN_agent_manager -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#airQualitySysem_RDCN_agent_manager">
+        <rdf:type rdf:resource="http://seitoSMA#AirQualityAgentManager"/>
+        <seitoSMA:manages rdf:resource="http://seitoSMA#PC_RDCN"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#airQualitySysem_RDCS_agent_manager -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#airQualitySysem_RDCS_agent_manager">
+        <rdf:type rdf:resource="http://seitoSMA#AirQualityAgentManager"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#airQualitySysem_first_floor_north_agent_manager -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#airQualitySysem_first_floor_north_agent_manager">
+        <rdf:type rdf:resource="http://seitoSMA#AirQualityAgentManager"/>
+        <seitoSMA:manages rdf:resource="http://seitoSMA#PC_1erN"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#airQualitySysem_first_floor_south_agent_manager -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#airQualitySysem_first_floor_south_agent_manager">
+        <rdf:type rdf:resource="http://seitoSMA#AirQualityAgentManager"/>
+        <seitoSMA:manages rdf:resource="http://seitoSMA#PC_1erS"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#first_floor_north -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#first_floor_north">
+        <rdf:type rdf:resource="http://seitoSMA#Zone"/>
+        <seitoSMA:containsAgent rdf:resource="http://seitoSMA#heationSysem_First_floor_North_agent_manager"/>
+        <seitoSMA:containsAgent rdf:resource="http://seitoSMA#lightingSysem_first_floor_north_agent_manager"/>
+        <seitoSMA:containsSystem rdf:resource="http://seitoSMA#Chauffage_1erN"/>
+        <seitoSMA:containsSystem rdf:resource="http://seitoSMA#Eclairage_1erN"/>
+        <seitoSMA:containsSystem rdf:resource="http://seitoSMA#PC_1erN"/>
+        <seitoSMA:containsSystem rdf:resource="http://seitoSMA#PC_back_up_1erN"/>
+        <s4bldg:hasSpace rdf:resource="http://seitoSMA#Room_K113"/>
+        <s4bldg:hasSpace rdf:resource="http://seitoSMA#Room_K114"/>
+        <s4bldg:hasSpace rdf:resource="http://seitoSMA#Room_K115"/>
+        <s4bldg:hasSpace rdf:resource="http://seitoSMA#Room_K116"/>
+        <s4bldg:hasSpace rdf:resource="http://seitoSMA#Room_K117"/>
+        <s4bldg:hasSpace rdf:resource="http://seitoSMA#Room_K118"/>
+        <s4bldg:hasSpace rdf:resource="http://seitoSMA#Room_K119"/>
+        <s4bldg:hasSpace rdf:resource="http://seitoSMA#Room_K120"/>
+        <s4bldg:hasSpace rdf:resource="http://seitoSMA#Room_K121"/>
+        <s4bldg:hasSpace rdf:resource="http://seitoSMA#Room_K122"/>
+        <s4bldg:hasSpace rdf:resource="http://seitoSMA#Room_K123"/>
+        <s4bldg:hasSpace rdf:resource="http://seitoSMA#Room_K124"/>
+        <s4bldg:hasSpace rdf:resource="http://seitoSMA#Room_K125"/>
+        <s4bldg:hasSpace rdf:resource="http://seitoSMA#Room_K126"/>
+        <s4bldg:hasSpace rdf:resource="http://seitoSMA#Room_K127"/>
+        <s4bldg:hasSpace rdf:resource="http://seitoSMA#1H2"/>
+        <s4bldg:hasSpace rdf:resource="http://seitoSMA#1S3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#first_floor_south -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#first_floor_south">
+        <rdf:type rdf:resource="http://seitoSMA#Zone"/>
+        <seitoSMA:containsAgent rdf:resource="http://seitoSMA#heationSysem_first_floor_south_agent_manager"/>
+        <seitoSMA:containsAgent rdf:resource="http://seitoSMA#lightingSysem_first_floor_south_agent_manager"/>
+        <seitoSMA:containsSystem rdf:resource="http://seitoSMA#Chauffage_1erS"/>
+        <seitoSMA:containsSystem rdf:resource="http://seitoSMA#Eclairage_1erS"/>
+        <seitoSMA:containsSystem rdf:resource="http://seitoSMA#PC_1erS"/>
+        <seitoSMA:containsSystem rdf:resource="http://seitoSMA#PC_back_up_1erS"/>
+        <s4bldg:hasSpace rdf:resource="http://seitoSMA#Room_K103"/>
+        <s4bldg:hasSpace rdf:resource="http://seitoSMA#Room_K105"/>
+        <s4bldg:hasSpace rdf:resource="http://seitoSMA#Room_K106"/>
+        <s4bldg:hasSpace rdf:resource="http://seitoSMA#Room_K107"/>
+        <s4bldg:hasSpace rdf:resource="http://seitoSMA#Room_K108"/>
+        <s4bldg:hasSpace rdf:resource="http://seitoSMA#Room_K110"/>
+        <s4bldg:hasSpace rdf:resource="http://seitoSMA#Room_K111"/>
+        <s4bldg:hasSpace rdf:resource="http://seitoSMA#Salle_de_Reunion_K102"/>
+        <s4bldg:hasSpace rdf:resource="http://seitoSMA#Serveur_Dep_K100"/>
+        <s4bldg:hasSpace rdf:resource="http://seitoSMA#1S1"/>
+        <s4bldg:hasSpace rdf:resource="http://seitoSMA#1S2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#heating_service -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#heating_service">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/seitoSMA#Service"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#heationSysem_First_floor_North_agent_manager -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#heationSysem_First_floor_North_agent_manager">
+        <rdf:type rdf:resource="http://seitoSMA#HeatingAgentManager"/>
+        <seitoSMA:manages rdf:resource="http://seitoSMA#Chauffage_1erN"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#heationSysem_RDCN_agent_manager -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#heationSysem_RDCN_agent_manager">
+        <rdf:type rdf:resource="http://seitoSMA#HeatingAgentManager"/>
+        <seitoSMA:manages rdf:resource="http://seitoSMA#Chauffage_RDCN"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#heationSysem_RDCS_agent_manager -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#heationSysem_RDCS_agent_manager">
+        <rdf:type rdf:resource="http://seitoSMA#HeatingAgentManager"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#heationSysem_first_floor_south_agent_manager -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#heationSysem_first_floor_south_agent_manager">
+        <rdf:type rdf:resource="http://seitoSMA#HeatingAgentManager"/>
+        <seitoSMA:manages rdf:resource="http://seitoSMA#Chauffage_1erS"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#lightingSysem_RDCN_agent_manager -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#lightingSysem_RDCN_agent_manager">
+        <rdf:type rdf:resource="http://seitoSMA#LightingAgentManager"/>
+        <seitoSMA:manages rdf:resource="http://seitoSMA#Eclairage_RDCN"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#lightingSysem_RDCS_agent_manager -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#lightingSysem_RDCS_agent_manager">
+        <rdf:type rdf:resource="http://seitoSMA#LightingAgentManager"/>
+        <seitoSMA:manages rdf:resource="http://seitoSMA#Eclairage_RDCN"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#lightingSysem_first_floor_north_agent_manager -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#lightingSysem_first_floor_north_agent_manager">
+        <rdf:type rdf:resource="http://seitoSMA#LightingAgentManager"/>
+        <seitoSMA:manages rdf:resource="http://seitoSMA#Eclairage_1erN"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#lightingSysem_first_floor_south_agent_manager -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#lightingSysem_first_floor_south_agent_manager">
+        <rdf:type rdf:resource="http://seitoSMA#LightingAgentManager"/>
+        <seitoSMA:manages rdf:resource="http://seitoSMA#Eclairage_1erS"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#lighting_service -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#lighting_service">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/seitoSMA#Service"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#0H1 -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#0H1">
+        <rdf:type rdf:resource="http://seitoSMA#Room"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#0H2 -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#0H2">
+        <rdf:type rdf:resource="http://seitoSMA#Room"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#0H3 -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#0H3">
+        <rdf:type rdf:resource="http://seitoSMA#Room"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#0H6 -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#0H6">
+        <rdf:type rdf:resource="http://seitoSMA#Room"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#1H1 -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#1H1">
+        <rdf:type rdf:resource="http://seitoSMA#Room"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#1H2 -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#1H2">
+        <rdf:type rdf:resource="http://seitoSMA#Room"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#1S1 -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#1S1">
+        <rdf:type rdf:resource="http://seitoSMA#Room"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#1S2 -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#1S2">
+        <rdf:type rdf:resource="http://seitoSMA#Room"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#1S3 -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#1S3">
+        <rdf:type rdf:resource="http://seitoSMA#Room"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#6102001000042 -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#6102001000042">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/seitoSMA#Device"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#6102001000103 -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#6102001000103">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/seitoSMA#Device"/>
+        <seitoSMA:isPartOf rdf:resource="http://seitoSMA#Chauffage_1erN"/>
+        <seitoSMA:isPartOf rdf:resource="http://seitoSMA#Eclairage_1erN"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#6102001000165 -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#6102001000165">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/seitoSMA#Device"/>
+        <seitoSMA:isPartOf rdf:resource="http://seitoSMA#Chauffage_1erS"/>
+        <seitoSMA:isPartOf rdf:resource="http://seitoSMA#Eclairage_1erS"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#6102001000202 -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#6102001000202">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/seitoSMA#Device"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://seitoSMA#6102001000219 -->
+
+    <owl:NamedIndividual rdf:about="http://seitoSMA#6102001000219">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/seitoSMA#Device"/>
+        <seitoSMA:isPartOf rdf:resource="http://seitoSMA#Chauffage_1erS"/>
+        <seitoSMA:isPartOf rdf:resource="http://seitoSMA#Eclairage_1erS"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://seitoSMA#b">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://seitoSMA#sp">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://seitoSMA#sys">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://seitoSMA#s">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://seitoSMA#a">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://seitoSMA#ser">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://seitoSMA#t">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://seitoSMA#serv">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>S2</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://seitoSMA#Building"/>
+                        <swrl:argument1 rdf:resource="http://seitoSMA#b"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.owl-ontologies.com/seitoSMA#Space"/>
+                                <swrl:argument1 rdf:resource="http://seitoSMA#sp"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.owl-ontologies.com/seitoSMA#Systéme"/>
+                                        <swrl:argument1 rdf:resource="http://seitoSMA#sys"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="https://saref.etsi.org/saref4bldg/hasSpace"/>
+                                                <swrl:argument1 rdf:resource="http://seitoSMA#b"/>
+                                                <swrl:argument2 rdf:resource="http://seitoSMA#sp"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.owl-ontologies.com/seitoSMA#containsSystem"/>
+                                                        <swrl:argument1 rdf:resource="http://seitoSMA#sp"/>
+                                                        <swrl:argument2 rdf:resource="http://seitoSMA#sys"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.owl-ontologies.com/seitoSMA#containsSystem"/>
+                        <swrl:argument1 rdf:resource="http://seitoSMA#b"/>
+                        <swrl:argument2 rdf:resource="http://seitoSMA#sys"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Si un agent manage un systeme alors il manage aussi le service offert par ce systeme</rdfs:comment>
+        <rdfs:label>S1</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.owl-ontologies.com/seitoSMA#Systéme"/>
+                        <swrl:argument1 rdf:resource="http://seitoSMA#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.owl-ontologies.com/seitoSMA#Agent"/>
+                                <swrl:argument1 rdf:resource="http://seitoSMA#a"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.owl-ontologies.com/seitoSMA#Service"/>
+                                        <swrl:argument1 rdf:resource="http://seitoSMA#ser"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.owl-ontologies.com/seitoSMA#manages"/>
+                                                <swrl:argument1 rdf:resource="http://seitoSMA#a"/>
+                                                <swrl:argument2 rdf:resource="http://seitoSMA#s"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.owl-ontologies.com/seitoSMA#offers"/>
+                                                        <swrl:argument1 rdf:resource="http://seitoSMA#s"/>
+                                                        <swrl:argument2 rdf:resource="http://seitoSMA#ser"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.owl-ontologies.com/seitoSMA#manages"/>
+                        <swrl:argument1 rdf:resource="http://seitoSMA#a"/>
+                        <swrl:argument2 rdf:resource="http://seitoSMA#ser"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Si un locataire occupes un espace et que cette espace dispose d&apos;un systeme qui offre un service alors le locataire peut utiliser ce service</rdfs:comment>
+        <rdfs:label>S3</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.owl-ontologies.com/seitoSMA#Tenant"/>
+                        <swrl:argument1 rdf:resource="http://seitoSMA#t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.owl-ontologies.com/seitoSMA#Space"/>
+                                <swrl:argument1 rdf:resource="http://seitoSMA#sp"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.owl-ontologies.com/seitoSMA#Systéme"/>
+                                        <swrl:argument1 rdf:resource="http://seitoSMA#s"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                <swrl:classPredicate rdf:resource="http://www.owl-ontologies.com/seitoSMA#Service"/>
+                                                <swrl:argument1 rdf:resource="http://seitoSMA#serv"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.owl-ontologies.com/seitoSMA#occupies"/>
+                                                        <swrl:argument1 rdf:resource="http://seitoSMA#t"/>
+                                                        <swrl:argument2 rdf:resource="http://seitoSMA#sp"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://www.owl-ontologies.com/seitoSMA#containsSystem"/>
+                                                                <swrl:argument1 rdf:resource="http://seitoSMA#sp"/>
+                                                                <swrl:argument2 rdf:resource="http://seitoSMA#s"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                        <swrl:propertyPredicate rdf:resource="http://www.owl-ontologies.com/seitoSMA#offers"/>
+                                                                        <swrl:argument1 rdf:resource="http://seitoSMA#s"/>
+                                                                        <swrl:argument2 rdf:resource="http://seitoSMA#serv"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.owl-ontologies.com/seitoSMA#canUse"/>
+                        <swrl:argument1 rdf:resource="http://seitoSMA#t"/>
+                        <swrl:argument2 rdf:resource="http://seitoSMA#serv"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+

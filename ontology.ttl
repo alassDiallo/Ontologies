@@ -6,7 +6,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix saref: <https://saref.etsi.org/core/v3.2.1/> .
-@prefix s4bldg: <http://www.owl-ontologies.com/s4bldg#> .
+@prefix s4bldg: <https://saref.etsi.org/saref4bldg/> .
 @prefix seitoSMA: <http://www.owl-ontologies.com/seitoSMA#> .
 @base <http://seitoSMA#> .
 
@@ -63,6 +63,13 @@ mod:createdWith rdf:type owl:AnnotationProperty .
     rdfs:label "is" .
 
 
+###  http://seitoSMA#isOccupiedBy
+:isOccupiedBy rdf:type owl:ObjectProperty ;
+              owl:inverseOf seitoSMA:occupies ;
+              rdfs:domain seitoSMA:Space ;
+              rdfs:range seitoSMA:Tenant .
+
+
 ###  http://seitoSMA#isSpaceOf
 :isSpaceOf rdf:type owl:ObjectProperty ;
            owl:inverseOf s4bldg:hasSpace ;
@@ -84,12 +91,12 @@ mod:createdWith rdf:type owl:AnnotationProperty .
            rdfs:range seitoSMA:Agent .
 
 
-###  http://www.owl-ontologies.com/s4bldg#hasSpace
-s4bldg:hasSpace rdf:type owl:ObjectProperty ,
-                         owl:TransitiveProperty ;
-                rdfs:domain :Building ;
-                rdfs:range seitoSMA:Space ;
-                rdfs:label "has space" .
+###  http://seitoSMA#ownerBy
+:ownerBy rdf:type owl:ObjectProperty ;
+         owl:inverseOf seitoSMA:owns ;
+         rdfs:domain seitoSMA:Space ,
+                     s4bldg:Building ;
+         rdfs:range seitoSMA:Owner .
 
 
 ###  http://www.owl-ontologies.com/seitoSMA#canAccess
@@ -207,6 +214,14 @@ seitoSMA:owns rdf:type owl:ObjectProperty ;
               rdfs:label "owns" .
 
 
+###  https://saref.etsi.org/saref4bldg/hasSpace
+s4bldg:hasSpace rdf:type owl:ObjectProperty ,
+                         owl:TransitiveProperty ;
+                rdfs:domain :Building ;
+                rdfs:range seitoSMA:Space ;
+                rdfs:label "has space" .
+
+
 #################################################################
 #    Classes
 #################################################################
@@ -260,16 +275,6 @@ seitoSMA:owns rdf:type owl:ObjectProperty ;
 ###  http://seitoSMA#Zone
 :Zone rdf:type owl:Class ;
       rdfs:subClassOf seitoSMA:Space .
-
-
-###  http://www.owl-ontologies.com/s4bldg#Building
-s4bldg:Building rdf:type owl:Class ;
-                rdfs:label "Building" .
-
-
-###  http://www.owl-ontologies.com/s4bldg#BuildingSpace
-s4bldg:BuildingSpace rdf:type owl:Class ;
-                     rdfs:label "Building Space" .
 
 
 ###  http://www.owl-ontologies.com/seitoSMA#Agent
@@ -351,6 +356,16 @@ saref:Device rdf:type owl:Class ;
 ###  https://saref.etsi.org/core/v3.2.1/Service
 saref:Service rdf:type owl:Class ;
               rdfs:label "Service" .
+
+
+###  https://saref.etsi.org/saref4bldg/Building
+s4bldg:Building rdf:type owl:Class ;
+                rdfs:label "Building" .
+
+
+###  https://saref.etsi.org/saref4bldg/BuildingSpace
+s4bldg:BuildingSpace rdf:type owl:Class ;
+                     rdfs:label "Building Space" .
 
 
 #################################################################
@@ -501,8 +516,7 @@ saref:Service rdf:type owl:Class ;
 ###  http://seitoSMA#POD2-00335
 :POD2-00335 rdf:type owl:NamedIndividual ,
                      seitoSMA:Device ;
-            seitoSMA:isPartOf :Chauffage_RDCN ,
-                              :Eclairage_RDCN .
+            seitoSMA:isPartOf :Chauffage_RDCN .
 
 
 ###  http://seitoSMA#POD2-00337
@@ -536,6 +550,11 @@ saref:Service rdf:type owl:Class ;
 ###  http://seitoSMA#RDCN
 :RDCN rdf:type owl:NamedIndividual ,
                :Zone ;
+      seitoSMA:containsAgent :heationSysem_RDCN_agent_manager ,
+                             :lightingSysem_RDCN_agent_manager ;
+      seitoSMA:containsSystem :Chauffage_RDCN ,
+                              :Eclairage_RDCN ,
+                              :PC_RDCN ;
       s4bldg:hasSpace :Labo_K020 ,
                       :Local_Dtente_K011 ,
                       :Room_K012 ,
@@ -547,17 +566,14 @@ saref:Service rdf:type owl:Class ;
                       :Sanitaire_K002 ,
                       :Sanitaire_K0S1 ,
                       :Sanitaire_K0S2 ,
-                      <http://seitoSMA#0H3> ;
-      seitoSMA:containsAgent :heationSysem_RDCN_agent_manager ,
-                             :lightingSysem_RDCN_agent_manager ;
-      seitoSMA:containsSystem :Chauffage_RDCN ,
-                              :Eclairage_RDCN ,
-                              :PC_RDCN .
+                      <http://seitoSMA#0H3> .
 
 
 ###  http://seitoSMA#RDCS
 :RDCS rdf:type owl:NamedIndividual ,
                :Zone ;
+      seitoSMA:containsAgent :lightingSysem_RDCS_agent_manager ;
+      seitoSMA:containsSystem :Eclairage_1erS ;
       s4bldg:hasSpace :Labo_K002 ,
                       :Labo_K003 ,
                       :Labo_K004 ,
@@ -570,9 +586,7 @@ saref:Service rdf:type owl:Class ;
                       :Salle_de_Reunion_K007 ,
                       <http://seitoSMA#0H1> ,
                       <http://seitoSMA#0H2> ,
-                      <http://seitoSMA#0H6> ;
-      seitoSMA:containsAgent :lightingSysem_RDCS_agent_manager ;
-      seitoSMA:containsSystem :Eclairage_1erS .
+                      <http://seitoSMA#0H6> .
 
 
 ###  http://seitoSMA#Room_K001
@@ -747,6 +761,13 @@ saref:Service rdf:type owl:Class ;
                     :Room .
 
 
+###  http://seitoSMA#SEQUOIA
+:SEQUOIA rdf:type owl:NamedIndividual ,
+                  seitoSMA:Tenant ;
+         seitoSMA:isTenantOf :EDF_Lab_les_Renardières ;
+         seitoSMA:occupies :first_floor_north .
+
+
 ###  http://seitoSMA#Salle_de_Reunion_K007
 :Salle_de_Reunion_K007 rdf:type owl:NamedIndividual ,
                                 :Room .
@@ -808,6 +829,12 @@ saref:Service rdf:type owl:Class ;
 ###  http://seitoSMA#first_floor_north
 :first_floor_north rdf:type owl:NamedIndividual ,
                             :Zone ;
+                   seitoSMA:containsAgent :heationSysem_First_floor_North_agent_manager ,
+                                          :lightingSysem_first_floor_north_agent_manager ;
+                   seitoSMA:containsSystem :Chauffage_1erN ,
+                                           :Eclairage_1erN ,
+                                           :PC_1erN ,
+                                           :PC_back_up_1erN ;
                    s4bldg:hasSpace :Room_K113 ,
                                    :Room_K114 ,
                                    :Room_K115 ,
@@ -824,18 +851,18 @@ saref:Service rdf:type owl:Class ;
                                    :Room_K126 ,
                                    :Room_K127 ,
                                    <http://seitoSMA#1H2> ,
-                                   <http://seitoSMA#1S3> ;
-                   seitoSMA:containsAgent :heationSysem_First_floor_North_agent_manager ,
-                                          :lightingSysem_first_floor_north_agent_manager ;
-                   seitoSMA:containsSystem :Chauffage_1erN ,
-                                           :Eclairage_1erN ,
-                                           :PC_1erN ,
-                                           :PC_back_up_1erN .
+                                   <http://seitoSMA#1S3> .
 
 
 ###  http://seitoSMA#first_floor_south
 :first_floor_south rdf:type owl:NamedIndividual ,
                             :Zone ;
+                   seitoSMA:containsAgent :heationSysem_first_floor_south_agent_manager ,
+                                          :lightingSysem_first_floor_south_agent_manager ;
+                   seitoSMA:containsSystem :Chauffage_1erS ,
+                                           :Eclairage_1erS ,
+                                           :PC_1erS ,
+                                           :PC_back_up_1erS ;
                    s4bldg:hasSpace :Room_K103 ,
                                    :Room_K105 ,
                                    :Room_K106 ,
@@ -846,13 +873,7 @@ saref:Service rdf:type owl:Class ;
                                    :Salle_de_Reunion_K102 ,
                                    :Serveur_Dep_K100 ,
                                    <http://seitoSMA#1S1> ,
-                                   <http://seitoSMA#1S2> ;
-                   seitoSMA:containsAgent :heationSysem_first_floor_south_agent_manager ,
-                                          :lightingSysem_first_floor_south_agent_manager ;
-                   seitoSMA:containsSystem :Chauffage_1erS ,
-                                           :Eclairage_1erS ,
-                                           :PC_1erS ,
-                                           :PC_back_up_1erS .
+                                   <http://seitoSMA#1S2> .
 
 
 ###  http://seitoSMA#heating_service
@@ -1004,6 +1025,10 @@ saref:Service rdf:type owl:Class ;
 
 :ser rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
+:t rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:serv rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
    rdfs:comment "" ;
    rdfs:label "S2" ;
@@ -1093,6 +1118,66 @@ saref:Service rdf:type owl:Class ;
                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> seitoSMA:manages ;
                                                        <http://www.w3.org/2003/11/swrl#argument1> :a ;
                                                        <http://www.w3.org/2003/11/swrl#argument2> :ser
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "Si un locataire occupes un espace et que cette espace dispose d'un systeme qui offre un service alors le locataire peut utiliser ce service" ;
+   rdfs:label "S3" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> seitoSMA:Tenant ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :t
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> seitoSMA:Space ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :sp
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> seitoSMA:Systéme ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :s
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#classPredicate> seitoSMA:Service ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :serv
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> seitoSMA:occupies ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> :t ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> :sp
+                                                                                                 ] ;
+                                                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#propertyPredicate> seitoSMA:containsSystem ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> :sp ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument2> :s
+                                                                                                            ] ;
+                                                                                                  rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                             rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#propertyPredicate> seitoSMA:offers ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#argument1> :s ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#argument2> :serv
+                                                                                                                       ] ;
+                                                                                                             rdf:rest rdf:nil
+                                                                                                           ]
+                                                                                                ]
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> seitoSMA:canUse ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :t ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :serv
                                                      ] ;
                                            rdf:rest rdf:nil
                                          ]
