@@ -1,5 +1,7 @@
 
 
+import time
+from threading import Timer
 from environment import Environment
 from request import requestData
 
@@ -11,8 +13,17 @@ def loadEnvironment():
     return (env,env.setAgents)
 
 
+def setInterval(agents):
+    delay = 30
+    
+    print('I print in intervals!')
+    requestData(agents)
+    time.sleep(delay)
+    
+    setInterval(agents)
 
 def main():
+    delay = 10.0
     env,agents = loadEnvironment()
     devices = set()
     for a in agents:
@@ -20,7 +31,11 @@ def main():
             devices.update(agents[a].managedSystem.devices)
     
     print(devices)
-    requestData(agents)
+    """t = Timer(delay,requestData,args=(agents,))
+    t.start()"""
+    #setInterval(agents=agents)
+
+    #requestData(agents)
 
 
 if __name__ == "__main__":

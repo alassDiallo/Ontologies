@@ -1,14 +1,14 @@
 from agents.MyAgent import MyAgent
 from devices.Device import Device
 from systems.System import System
-#from environment import Environment
-class HeatingSystemAgentManager(MyAgent):
+
+class VentillationSystemAgentManager(MyAgent):
     def __init__(self,id,mangedSysteme:System=None,location=""):
         super().__init__(id,managedSystem=mangedSysteme,location=location)
         self.preferenceTemperature = 19
     
     def automationRegulation(self,device:Device):
-        if device.temp > self.preferenceTemperature and   (env.temperatureGlobalMinim  <= self.preferenceTemperature <= env.temperatureGlobalMax):
+        if device.temp > self.preferenceTemperature:
             print("temperature elevée")
             while device.temp > self.preferenceTemperature:
                 print(f"temperature recueillie = {device.temp} --- temperature normal = {self.preferenceTemperature}")
