@@ -10,11 +10,12 @@ from systems.HeatingSystem import HeatingSystem
 from systems.LightingSystem import LightingSystem
 from devices.Device import *
 from environment import *
+import datetime
 #from owlready2 import *
 
 # Générer le fichier DOT à partir du graphique RDF
 
-def requestData(setAgents):
+def requestData(setAgents,env):
 
     # rdf2dot(g, sys.stdout)
 
@@ -53,13 +54,18 @@ def requestData(setAgents):
     heatingAgent.automationRegulatiopn(10)
     heatingAgent.automationRegulatiopn(40)
     """
+    #2024-05-23T12:20:05Z
+    now = datetime.datetime.now() 
+    start_date = now - datetime.timedelta(hours=3)
+    end_date = (start_date + datetime.timedelta(seconds=10)).strftime("%Y-%m-%dT%H:%M:%SZ")
+    start_date = start_date.strftime("%Y-%m-%dT%H:%M:%SZ")
     login_url = "https://ellonasoft.io/api/v2/login"
     data_url = "https://ellonasoft.io/api/v2/extract-data"
     # data to sent to API
     body_login ={'login': 'AAcolant','password':'jidFZE)_XSd1'}
     body_data = {
-    "from": "2024-05-23T12:20:05Z",
-    "to": "2024-05-23T12:25:10Z",
+    "from": start_date,
+    "to": end_date,
     "types":["temperature","humidity"]
     }
     # sending post request and saving response as response object
@@ -71,7 +77,9 @@ def requestData(setAgents):
         print('token: %s' % token)
         r_data = requests.post(url=data_url,json=body_data,headers={'x-auth':token},verify=False)
         print('data retrieval status: %s' % r_data.status_code)
-        if(r_data.status_code == 200):
+        print("--------------",len(r_data.json()["data"]["measurements"]))
+        print()
+        if(r_data.status_code == 200 and len(r_data.json()["data"]["measurements"])>0):
             print(r_data.json())
             r=r_data.json()["data"]
             print("la date est : ",r["measurements"][0]['date'])
@@ -94,7 +102,7 @@ def requestData(setAgents):
                         print(temp,hum)
                         device = Device(id=r["devices"][d],hum=hum,temp=temp)
                         print(device)
-                        setAgents[agent].automationRegulation(device)
+                        setAgents[agent].automaticRegulation(device)
                         break
                     else:
                         continue

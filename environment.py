@@ -17,8 +17,8 @@ from environment import *
 from systems.System import System
 class Environment():
     def __init__(self):
-        self.temperatureGlobalMinim=19
-        self.temperatureGlobalMax=26
+        self.temperatureGlobalMinim=20
+        self.temperatureGlobalMax=25
         self.setAgents = []
         
 
@@ -61,26 +61,26 @@ class Environment():
             if agent.is_a[0] == onto.AirQualityAgentManager:
                 name_agent = agent.name
                 agent_id = "AirQualityAgent" + str(c)
-                ag = AirQualitySystemAgentManager(id=name_agent)
+                ag = AirQualitySystemAgentManager(id=name_agent,env=self)
                 print("air quality agent manager",name_agent)
             
             elif agent.is_a[0] == onto.HeatingAgentManager:
                 name_agent = agent.name
                 agent_id = "HeatingAgent" + str(c)
-                ag = HeatingSystemAgentManager(id=name_agent)
+                ag = HeatingSystemAgentManager(id=name_agent,env=self)
                 print("heating agent manager",name_agent)
                
             elif agent.is_a[0] == onto.LightingAgentManager:
                 name_agent = agent.name
                 agent_id = "LightingAgent" + str(c)
-                ag = LightingSystemAgentManager(id=name_agent)
+                ag = LightingSystemAgentManager(id=name_agent,env=self)
                 print("lighting agent manager",name_agent)
                 print("lighting agent manager")
                 
             else:
                 name_agent = agent.name
                 agent_id = "Agent" + str(c)
-                ag = MyAgent(id=name_agent)
+                ag = MyAgent(id=name_agent,env=self)
             
             # Check if the agent has a location and retrieve it
             location=None

@@ -3,11 +3,12 @@ from systems.System import System
 from abc import abstractmethod
 
 class MyAgent:
-    def __init__(self,id,managedSystem:System=None,location=None):
+    def __init__(self,id,env,managedSystem:System=None,location=None):
         self.id=id
         self.managedSystem=managedSystem
         self.location=location
         self.mailBox = []
+        self.env = env
 
     def sendMessage(self,idReceiver,textContent):
         pass
@@ -22,6 +23,6 @@ class MyAgent:
       return f"{self.id} manages {self.managedSystem}"
     
     @abstractmethod
-    def automationRegulation(self,device:Device):
+    def automaticRegulation(self,device:Device):
         pass
     

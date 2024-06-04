@@ -13,14 +13,14 @@ def loadEnvironment():
     return (env,env.setAgents)
 
 
-def setInterval(agents):
+def setInterval(agents,env):
     delay = 30
     
     print('I print in intervals!')
-    requestData(agents)
+    requestData(agents,env)
     time.sleep(delay)
     
-    setInterval(agents)
+    setInterval(agents,env)
 
 def main():
     delay = 10.0
@@ -35,7 +35,7 @@ def main():
     t.start()"""
     #setInterval(agents=agents)
 
-    #requestData(agents)
+    requestData(agents,env)
 
 
 if __name__ == "__main__":
